@@ -39,6 +39,8 @@ target_link_libraries(example PRIVATE spdlog pthread)
 add_library(HCLogger logger.cpp logger.h)
 target_link_libraries(HCLogger PRIVATE spdlog pthread)
 
+add_executable(test_logger test_logger.cpp)
+target_link_libraries(test_logger PRIVATE HCLogger)
 # ---------------------------------------------------------------------------------------
 # Example of using header-only library
 # ---------------------------------------------------------------------------------------
